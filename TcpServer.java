@@ -14,14 +14,14 @@ public class TcpServer {
   }
 
   public void initServer() { 
-    
+
   }
 
   public static void main(String[] args) {
     String fileName = args[0];
-    int udpPortServer = args[1];
-    int windowSize = args[2];
-    float lp = args[3];
+    int udpPortServer = Integer.valueOf(args[1]);
+    int windowSize = Integer.valueOf(args[2]);
+    float lp = Float.valueOf(args[3]);
 
     TcpServer tcpServer = new TcpServer(fileName, udpPortServer, windowSize, lp);
   }

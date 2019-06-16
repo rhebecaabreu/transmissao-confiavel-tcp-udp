@@ -19,6 +19,8 @@ public class TcpClient {
       this.tcpMss = tcpMss;
       this.dupack = dupack;
       this.lp = lp; 
+
+      initClient();
   }
 
   public void initClient() {
@@ -28,12 +30,12 @@ public class TcpClient {
   public static void main(String[] args) {
     String fileName = args[0];
     String endIpServer = args[1];
-    int udpPortServer = args[2];
-    int windowSize = args[3];
-    int timeout = args[4];
-    int tcpMss = args[5];
-    int dupack = args[6];
-    float lp = args[7];
+    int udpPortServer = Integer.valueOf(args[2]);
+    int windowSize = Integer.valueOf(args[3]);
+    int timeout = Integer.valueOf(args[4]);
+    int tcpMss = Integer.valueOf(args[5]);
+    int dupack = Integer.valueOf(args[6]);
+    float lp = Float.valueOf(args[7]);
 
     if(dupack != 0 && dupack != 1) {
       System.out.println("Dupack invalid valor. \n(Must be 0 or 1)");
